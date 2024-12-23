@@ -7,14 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/register" method="POST">
+    <form action="{{route('student.create')}}" method="POST">
         @csrf
         <input type="text" name="LearnersNumber" placeholder="Learner's Reference Number">
         <input type="text" name="FirstName" placeholder="First Name">
         <input type="text" name="LastName" placeholder="Last Name">
         <input type="number" name="LearnersAge" placeholder="LearnersAge">
 
-        <button>Submit</button>
+        <button>Submit</button>    
+        <!--
+        -->
     </form>
+    @if (session('message'))
+        <script>
+            alert("{{session('message')}}");
+        </script>
+    @endif
+
 </body>
 </html>

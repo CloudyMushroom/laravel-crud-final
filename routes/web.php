@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\StudentController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +14,9 @@ use app\Http\Controllers\StudentController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
+Route::get('/', [StudentController::class, 'Index'])->name('student.index');
 Route::post('/register', [StudentController::class, 'StoreData'])->name('student.create');
+Route::get('/register', [StudentController::class, 'ViewCreatePage'])->name('student.create');
+
 
 

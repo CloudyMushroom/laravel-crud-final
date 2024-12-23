@@ -7,6 +7,17 @@ use App\Models\Student;
 
 class StudentController extends Controller
 {
+    public function Index() //fix next time should have dashboard
+    {
+        $students = Student::all();
+        return view('student.index', compact('students'));
+    }
+
+    public function ViewCreatePage()
+    {
+        return view('student.create');
+    }
+
     public function StoreData(Request $request)
     {
         $validateData = $request->validate([
@@ -18,6 +29,6 @@ class StudentController extends Controller
 
         Student::create($validateData);
 
-        return 'Created Successfully!';
+        return redirect()->route('student.index')->with('message', "Created Successfully!");
     }
 }
