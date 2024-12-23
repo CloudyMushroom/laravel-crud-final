@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="/register" method="POST">
+        @csrf
+        <input type="text" name="LearnersNumber" placeholder="Learner's Reference Number">
+        <input type="text" name="FirstName" placeholder="First Name">
+        <input type="text" name="LastName" placeholder="Last Name">
+        <input type="number" name="LearnersAge" placeholder="LearnersAge">
+
+        <button>Submit</button>
+    </form>
 </body>
 </html>
