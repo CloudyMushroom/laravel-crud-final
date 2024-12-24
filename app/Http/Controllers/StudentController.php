@@ -15,7 +15,7 @@ class StudentController extends Controller
 
     public function ViewCreatePage()
     {
-        return view('student.create');
+        return view('student.create'); // fix this soon
     }
 
     public function StoreData(Request $request)
