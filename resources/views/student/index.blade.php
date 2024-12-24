@@ -23,6 +23,7 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Learners Age</th>
+       
         </tr>
 
         @foreach ($students as $student)
@@ -31,6 +32,7 @@
             <td>{{$student->FirstName}}</td>
             <td>{{$student->LastName}}</td>
             <td>{{$student->LearnersAge}}</td>
+            <td><a href="{{route('student.edit', ['student' => $student])}}">Edit</a></td>
         </tr>
         @endforeach
       

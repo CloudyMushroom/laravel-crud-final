@@ -15,14 +15,8 @@
         <input type="number" name="LearnersAge" placeholder="LearnersAge">
 
         <button>Submit</button>    
-        <!--
-        -->
+
     </form>
-    @if (session('message'))
-        <script>
-            alert("{{session('message')}}");
-        </script>
-    @endif
 
 </body>
 </html>

@@ -15,7 +15,7 @@ class StudentController extends Controller
 
     public function ViewCreatePage()
     {
-        return view('student.create'); // fix this soon
+        return view('student.create'); // directory of the view not necessarily from route
     }
 
     public function StoreData(Request $request)
@@ -29,6 +29,11 @@ class StudentController extends Controller
 
         Student::create($validateData);
 
-        return redirect()->route('student.index')->with('message', "Created Successfully!");
+        return redirect()->route('student.index');
+    }
+
+    public function EditData(Student $student)
+    {        
+        return view('student.edit');
     }
 }
