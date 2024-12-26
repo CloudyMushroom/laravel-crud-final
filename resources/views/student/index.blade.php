@@ -32,7 +32,7 @@
             <td>{{$student->FirstName}}</td>
             <td>{{$student->LastName}}</td>
             <td>{{$student->LearnersAge}}</td>
-            <td><a href="{{route('student.edit', ['student' => $student])}}">Edit</a></td>
+            <td><a href="{{route('student.edit', ['student' => $student->id])}}">Edit</a></td>
         </tr>
         @endforeach
       

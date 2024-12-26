@@ -15,7 +15,7 @@ class StudentController extends Controller
 
     public function ViewCreatePage()
     {
-        return view('student.create'); // directory of the view not necessarily from route
+        return view('student.create'); // directory of the view, not necessarily from route its from the files
     }
 
     public function StoreData(Request $request)
@@ -32,8 +32,25 @@ class StudentController extends Controller
         return redirect()->route('student.index');
     }
 
-    public function EditData(Student $student)
-    {        
-        return view('student.edit');
+    public function EditData($id) // view only
+    {   
+        $student = Student::findorFail($id);
+        return view('student.edit', compact('student'));
+    }
+
+    public function UpdatingData(Request $request, $id)
+    {
+        $validateData = $request->validate([
+
+            'LearnersNumber' => 'required',
+            'FirstName' => 'required',
+            'LastName' => 'required',
+            'LearnersAge' => 'required'
+        ]);
+
+        $student = Student::findorFail($id);
+        $student->update($validateData);
+
+        return redirect()->route('student.index');
     }
 }

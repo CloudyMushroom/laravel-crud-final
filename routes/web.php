@@ -18,5 +18,6 @@ Route::get('/', [StudentController::class, 'Index'])->name('student.index');
 Route::post('/register/student', [StudentController::class, 'StoreData'])->name('student.create');
 Route::get('/register/student', [StudentController::class, 'ViewCreatePage'])->name('student.create');
 Route::get('/edit/{student}', [StudentController::class, 'EditData'])->name('student.edit');
+Route::put('/edit/{student}/update', [StudentController::class, 'UpdatingData'])->name('student.update');
 
 
