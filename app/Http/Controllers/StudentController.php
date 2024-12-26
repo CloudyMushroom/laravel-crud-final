@@ -21,7 +21,7 @@ class StudentController extends Controller
     public function StoreData(Request $request)
     {
         $validateData = $request->validate([
-            'LearnersNumber' => 'required',
+            'LearnersNumber' => 'required', 
             'FirstName' => 'required',
             'LastName' => 'required',
             'LearnersAge' => 'required'            
@@ -51,6 +51,14 @@ class StudentController extends Controller
         $student = Student::findorFail($id);
         $student->update($validateData);
 
+        return redirect()->route('student.index');
+        //return 'updated successfully';
+    }
+    
+    public function DeleteData($id)
+    {
+        $student = Student::findorFail($id);
+        $student->delete();
         return redirect()->route('student.index');
     }
 }

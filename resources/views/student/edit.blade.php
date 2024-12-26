@@ -10,6 +10,7 @@
     <form action="{{route('student.update', $student->id)}}" method="POST">
         @csrf
         @method('PUT')
+        <h1>HI {{ $student->FirstName}}</h1>
         <input type="text" name="LearnersNumber" value="{{ $student->LearnersNumber }}">
         <input type="text" name="FirstName" value="{{ $student->FirstName }}">
         <input type="text" name="LastName" value="{{ $student->LastName }}">

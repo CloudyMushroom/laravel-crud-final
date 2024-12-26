@@ -32,7 +32,14 @@
             <td>{{$student->FirstName}}</td>
             <td>{{$student->LastName}}</td>
             <td>{{$student->LearnersAge}}</td>
-            <td><a href="{{route('student.edit', ['student' => $student->id])}}">Edit</a></td>
+            <td><a href="{{route('student.edit', $student->id)}}">Edit</a></td>
+            <td>
+                <form action="{{route('student.delete', $student->id)}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit">DELETE</button>
+                </form>
+            </td>
         </tr>
         @endforeach
       
