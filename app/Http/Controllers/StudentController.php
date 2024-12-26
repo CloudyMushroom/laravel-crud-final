@@ -9,8 +9,8 @@ class StudentController extends Controller
 {
     public function Index() //fix next time should have dashboard
     {
-        $students = Student::all();
-        return view('student.index', compact('students'));
+        $students = Student::all(); // fetch all the data from studenttable
+        return view('student.index', compact('students')); // compressed or compact then display it on student.index page
     }
 
     public function ViewCreatePage()
