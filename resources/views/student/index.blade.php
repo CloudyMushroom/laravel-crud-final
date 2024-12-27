@@ -12,6 +12,7 @@
 
     
     <div class="main-content">
+        <livewire:first-component/>
         <h1 class="title">LANDING PAGE</h1>
         <form class="form-btn"action="{{route('student.create')}}" method="GET">
             <button class="btn-create">CREATE</button>
