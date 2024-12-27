@@ -4,45 +4,18 @@
 
 .body
 {
-    @apply box-border flex justify-center items-center h-screen bg-slate-50;
-    
+    @apply flex justify-center items-center bg-slate-50 h-screen;
 }
 
-.main-content
+.main-content  
 {
-    @apply p-10 border rounded-2xl drop-shadow-2xl bg-white;
+    @apply box-border bg-white border shadow-lg w-2/3 text-sm md:w-auto md:text-base;
 }
 
-.title
+.title 
 {
-    @apply py-3 text-3xl font-bold text-center;
+    @apply text-lg font-bold text-center;
 }
-
-table, td, th
-{
-    @apply border ;
-}
-
-td, th
-{
-    @apply p-2 text-center;
-}
-
-th
-{
-    @apply bg-gray-50;
-}
-
-a
-{
-    @apply cursor-pointer p-2 transition text-cyan-600 hover:text-cyan-400;
-}
-
-.btn-del    
-{
-    @apply p-2 transition text-rose-800 hover:text-rose-400;
-}
-
 
 .form-btn
 {
@@ -51,6 +24,11 @@ a
 
 .btn-create
 {
-    @apply bg-green-400 cursor-pointer border px-6 py-2 transition-all hover:bg-green-300;
+    @apply border py-2 px-5 m-5;
+}
+
+table
+{
+    @apply border
 }
 

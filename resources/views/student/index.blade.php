@@ -17,9 +17,7 @@
             <button class="btn-create">CREATE</button>
         </form>
         
-        <br>
-        <br>
-        <br>
+      
         <table border="2">
             <tr>
                 <th>Learners Reference Number</th>
@@ -40,7 +38,7 @@
                     <form action="{{route('student.delete', $student->id)}}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button class="btn-del" type="submit">Delete</button>
+                        <button class="btn-delete" type="submit">Delete</button>
                     </form>
                 </td>
             </tr>
