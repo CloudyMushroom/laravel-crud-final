@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    @vite('resources/css/app.css')
 </head>
 <body> 
     <!-- FOR READ in CRUD -->
 
-    <h1>landing page</h1>
+    <h1 class="text-red-300">landing page</h1>
     <form action="{{route('student.create')}}" method="GET">
         <button>CREATE</button>
     </form>
