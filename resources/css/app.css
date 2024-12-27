@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.body
+{
+    @apply box-border flex justify-center items-center h-screen bg-slate-50;
+    
+}
+
+.main-content
+{
+    @apply p-10 border rounded-2xl drop-shadow-2xl bg-white;
+}
+
+.title
+{
+    @apply py-3 text-3xl font-bold text-center;
+}
+
+table, td, th
+{
+    @apply border ;
+}
+
+td, th
+{
+    @apply p-2 text-center;
+}
+
+th
+{
+    @apply bg-gray-50;
+}
+
+a
+{
+    @apply cursor-pointer p-2 transition text-cyan-600 hover:text-cyan-400;
+}
+
+.btn-del    
+{
+    @apply p-2 transition text-rose-800 hover:text-rose-400;
+}
+
+
+.form-btn
+{
+    @apply flex justify-center;
+}
+
+.btn-create
+{
+    @apply bg-green-400 cursor-pointer border px-6 py-2 transition-all hover:bg-green-300;
+}
+
