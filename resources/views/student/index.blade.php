@@ -19,7 +19,7 @@
         </form>
         
       
-        <table border="2">
+        <table>
             <tr>
                 <th>Learners Reference Number</th>
                 <th>First Name</th>

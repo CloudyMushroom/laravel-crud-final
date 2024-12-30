@@ -1,3 +1,3 @@
 <div>
-    <h1 class="text-blue-600 text-center">HEHE</h1>
+    <h1 class="comp-text">FIRST COMPONENT</h1>
 </div>
