@@ -1,0 +1,36 @@
+CREATE / INSERT
+DB -> MIGRATION/DB ->  MODEL -> CONTROLLER
+
+Step 1: Create laravel files
+- composer create-project laravel/laravel nameofProj
+
+Step 2: Create database while waiting for step 1
+- XAMPP
+
+Step 3: Run the laravel app
+- php artisan serve
+
+Step 4: Change ENV file to connect database
+- name of db
+
+Step 5: Create a table using migration then run it
+NOTE: make sure the table is in plural form then make sure that the model protects or specify the table (protected $table = 'tablename')
+- php artisan make:migration create_students_table
+- php artisan migrate // run and make the table
+- php artisan migrate:refresh
+
+Step 6: Create a model
+- php artisan make:model student // student is anyname refers or relevant to the table, singular.
+- protect the data and the table $fillable, $table
+
+Step 7: Create a controller
+- php artisan make:controller StudentController
+- add use or directories from relative or specific  model
+
+Step 8: Create Logic in a controller
+- CRUD logics, etc.
+
+Step 9: Create routes
+- directory: routes/web.php
+- add use or directories from relative or specific controller
+- make sure the App should App not app in writing directories
